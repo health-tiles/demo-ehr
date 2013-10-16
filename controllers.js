@@ -4,21 +4,21 @@ angular.module('healthTiles').controller("MainController",
     $scope.tileSources = [{
       label: "Glucose Readings",
       urls: {
-        authorize: "http://health-tiles.github.io/demo-glucose-provider/authorize.html",
+        authorize: "http://health-tiles.github.io/demo-glucose-provider/auth.html",
         tile: "http://health-tiles.github.io/demo-glucose-provider/tile.html",
         data: null
       }
     },{
       label: "Exercise Log",
       urls: {
-        authorize: "http://health-tiles.github.io/demo-glucose-provider/authorize.html",
+        authorize: "http://health-tiles.github.io/demo-glucose-provider/auth.html",
         tile: "http://health-tiles.github.io/demo-glucose-provider/tile.html",
         data: null
       }
     },{
       label: "Mood Journal",
       urls: {
-        authorize: "http://health-tiles.github.io/demo-glucose-provider/authorize.html",
+        authorize: "http://health-tiles.github.io/demo-glucose-provider/auth.html",
         tile: "http://health-tiles.github.io/demo-glucose-provider/tile.html",
         data: null
       }
