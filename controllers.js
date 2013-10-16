@@ -22,6 +22,13 @@ angular.module('healthTiles').controller("MainController",
         tile: "http://health-tiles.github.io/demo-glucose-provider/tile.html",
         data: null
       }
+    },{
+      label: "Custom Local Tile",
+      urls: {
+        authorize: "http://localhost:8001/auth.html",
+        tile: "http://localhost:8001/tile.html", 
+        data: "http://localhost:8001/data.json" 
+      }
     }];
 
     $scope.tiles = [];
