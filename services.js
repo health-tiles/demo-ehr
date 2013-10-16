@@ -34,7 +34,7 @@ angular.module('healthTiles').factory('tileService', function($rootScope, $timeo
 
   function add(tile){
     var tiles = get().filter(function(t){
-      return t.urls.tile !== tile.urls.tile && t.label !== tile.label
+      return (t.urls.tile !== tile.urls.tile || t.label !== tile.label);
     });
     tiles.push(t);
     localStorage['tiles'] = JSON.stringify(tiles);
@@ -43,7 +43,7 @@ angular.module('healthTiles').factory('tileService', function($rootScope, $timeo
 
   function remove(tile){
     var tiles = get().filter(function(t){
-      return t.urls.tile !== tile.urls.tile && t.label !== tile.label
+      return t.urls.tile !== tile.urls.tile || t.label !== tile.label
     });
     localStorage['tiles'] = JSON.stringify(tiles);
     $rootScope.$emit('got-tiles', tiles);
